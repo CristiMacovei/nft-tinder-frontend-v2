@@ -1,0 +1,11 @@
+.unstyled-button {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #1177dd;
+}
+
+.unstyled-button:hover {
+  color: #0066cc;
+}
