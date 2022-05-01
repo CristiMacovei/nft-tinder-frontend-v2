@@ -26,7 +26,7 @@ export default function App() {
         window.location.href = '/home' 
       }
       else {
-        document.querySelector('#loading-div').classList.add('hidden')
+        document.querySelector('#loading-spinner').classList.add('hidden')
         document.querySelector('#main').classList.remove('hidden')
       }
     })()
