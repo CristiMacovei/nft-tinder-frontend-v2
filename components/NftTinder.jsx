@@ -102,7 +102,7 @@ const NftTinder = () => {
           </div>
           
           <div id='main' className='w-full h-full'>            
-            <div className='absolute z-10 w-5/6 h-2/3'>
+            <div className='absolute z-10 retarded-engineering'>
               <div className='h-2/3'>
               
               </div>
@@ -128,7 +128,7 @@ const NftTinder = () => {
               </div>
             </div>
             
-            <div id='image-div' className='absolute flex items-start justify-center w-5/6 h-2/3 rounded-3xl'>
+            <div id='image-div' className='absolute flex items-start justify-center retarded-engineering rounded-3xl'>
               
             </div>
           </div>

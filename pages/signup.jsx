@@ -31,7 +31,7 @@ const Signup = () => {
   }
 
   return (
-    <div className='h-screen'>
+    <div className='custom-scale'>
       <div className='flex items-center justify-center h-1/6'>
         <Logo />
       </div>

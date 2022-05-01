@@ -44,7 +44,7 @@ export default function App() {
     <>
       <Loading />
 
-      <div id='main' className='hidden h-full'>
+      <div id='main' className='hidden custom-scale'>
         <div className='h-2/5'></div>
         
         <div className='flex items-start justify-center h-1/5'>

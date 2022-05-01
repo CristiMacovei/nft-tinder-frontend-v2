@@ -6,7 +6,7 @@ import BottomBar from '../components/BottomBar.jsx'
 
 const Stats = () => {
   return (
-    <div className='h-full'>
+    <div className='custom-scale'>
       <Nav />
 
       <UserProfile />

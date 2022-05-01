@@ -7,7 +7,7 @@ import BottomBar from '../components/BottomBar.jsx'
 
 const Home = () => {
   return (
-    <div className='h-full'>
+    <div className='custom-scale'>
       <Nav></Nav>
 
       <NftTinder></NftTinder>

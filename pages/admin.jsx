@@ -1,19 +1,20 @@
-import React from 'react'
+import { useEffect } from 'react'
+import { getCookie } from 'cookies-next'
 
 import Nav from '../components/Nav.jsx'
-import StatsContainer from '../components/StatsContainer.jsx'
+import Admin from '../components/Admin.jsx'
 import BottomBar from '../components/BottomBar.jsx'
 
-const Stats = () => {
+const AdminPage = () => {
   return (
     <div className='custom-scale'>
       <Nav></Nav>
-      
-      <StatsContainer></StatsContainer>
+
+      <Admin />
 
       <BottomBar></BottomBar>
     </div>
   )
 }
 
-export default Stats
+export default AdminPage

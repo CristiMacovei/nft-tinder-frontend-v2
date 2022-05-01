@@ -10,3 +10,14 @@ div#__next {
 .inherit-height {
   height: inherit !important;
 }
+
+.custom-scale {
+  height: 100%;
+  aspect-ratio: 9/16;
+  margin: 0 auto;
+}
+
+.retarded-engineering {
+  height: 66.66666666667vh;
+  aspect-ratio: 27/40;
+}
