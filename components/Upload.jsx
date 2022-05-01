@@ -40,7 +40,9 @@ const Upload = () => {
       setProgressBarState({done: index, target: fileInput.files.length})
     }
 
-    document.querySelector('#progress-bar-wrapper').classList.add('hidden')
+    setTimeout(() => {
+      window.location.reload()
+    }, 1000)
   }
 
   return (

@@ -22,7 +22,7 @@ const Signup = () => {
 
     if (response.data.status === 'success') {
       setCookies('token', response.data.user.token)
-      window.location.href = '/home'
+      window.location.href = '/landing'
     }
   }
 

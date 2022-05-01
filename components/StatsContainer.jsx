@@ -28,6 +28,10 @@ const StatsContainer = () => {
     })()
   }, [])
 
+  async function handleDownloadClick() {
+    alert('Not implemented yet!')
+  }
+
   return (
     <div className='h-2/3'>
       <div className='w-full h-2/3'>
@@ -55,7 +59,7 @@ const StatsContainer = () => {
 
       <div className='h-1/3'>        
         <div className='w-5/12 mx-auto mt-6'>
-          <button className='w-full h-8 text-lg font-semibold rounded-lg bg-slate-200'>DOWNLOAD IDS</button>
+          <button className='w-full h-8 text-lg font-semibold rounded-lg bg-slate-200' onClick={handleDownloadClick}>DOWNLOAD IDS</button>
         </div>
 
         <div className='mt-4'>

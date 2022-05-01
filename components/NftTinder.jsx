@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { getCookie } from 'cookies-next'
 import axios from 'axios'
 
-import Image from 'next/image'
+import Loading from './Loading'
 
 const NftTinder = () => {
   function showLoadingSpinner() {
@@ -95,11 +95,7 @@ const NftTinder = () => {
       <div className='h-2/3'>
         <div className='w-5/6 h-full mx-auto rounded-3xl'>
           
-          <div id='loading-spinner' className='hidden w-full h-full rounded-3xl'>
-            <div className='flex items-center justify-center w-full h-full rounded-3xl'>
-              <Image src='/loading.gif' width='100%' height='100%' alt='Loading'/>
-            </div>
-          </div>
+          <Loading />
           
           <div id='main' className='w-full h-full'>            
             <div className='absolute z-10 retarded-engineering'>
