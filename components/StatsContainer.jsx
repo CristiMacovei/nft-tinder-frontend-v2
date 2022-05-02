@@ -28,8 +28,19 @@ const StatsContainer = () => {
     })()
   }, [])
 
-  async function handleDownloadClick() {
-    alert('Not implemented yet!')
+  async function downloadStats() {
+    const token = getCookie('token')
+    if (typeof token === 'undefined') {
+      window.location.href = '/login'
+    }
+
+    const response = await axios.get(process.env.NEXT_PUBLIC_API_URL + '/csv', {
+      headers: {
+        Authorization: token
+      }
+    })
+
+    window.open(response.data.csv)
   }
 
   return (
@@ -59,7 +70,7 @@ const StatsContainer = () => {
 
       <div className='h-1/3'>        
         <div className='w-5/12 mx-auto mt-6'>
-          <button className='w-full h-8 text-lg font-semibold rounded-lg bg-slate-200' onClick={handleDownloadClick}>DOWNLOAD IDS</button>
+          <button className='w-full h-8 text-lg font-semibold rounded-lg bg-slate-200' onClick={downloadStats}>DOWNLOAD IDS</button>
         </div>
 
         <div className='mt-4'>
