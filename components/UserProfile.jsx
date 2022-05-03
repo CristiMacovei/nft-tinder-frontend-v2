@@ -34,7 +34,8 @@ const UserProfile = () => {
       }
     })
 
-    window.open(response.data.csv)
+    console.log(response.data)
+    window.location.assign(response.data.csv)
   }
 
   async function deleteData() {

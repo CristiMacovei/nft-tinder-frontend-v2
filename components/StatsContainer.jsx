@@ -40,7 +40,8 @@ const StatsContainer = () => {
       }
     })
 
-    window.open(response.data.csv)
+    console.log(response)
+    window.location.assign(response.data.csv)
   }
 
   return (
