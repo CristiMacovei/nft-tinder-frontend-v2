@@ -1,10 +1,27 @@
 import { useEffect, useState } from 'react'
 import { getCookie } from 'cookies-next'
 import axios from 'axios'
+import { useSwipeable } from 'react-swipeable'
 
 import Loading from './Loading'
 
 const NftTinder = () => {
+  const swipeConfig = {
+    delta: 10,                             // min distance(px) before a swipe starts. *See Notes*
+    preventScrollOnSwipe: false,           // prevents scroll during swipe (*See Details*)
+    trackTouch: true,                      // track touch input
+    trackMouse: true,                     // track mouse input
+    rotationAngle: 0,                      // set a rotation angle
+    swipeDuration: Infinity,               // allowable duration of a swipe (ms). *See Notes*
+    touchEventOptions: { passive: true },  // options for touch listeners (*See Details*)
+  }
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => handleLike(),
+    onSwipedRight: () => handleDislike(),
+    ...swipeConfig
+  })
+
   function showLoadingSpinner() {
     document.querySelector('#main').classList.add('hidden')
     document.querySelector('#loading-spinner').classList.remove('hidden')
@@ -93,7 +110,7 @@ const NftTinder = () => {
   
   return (
     <>      
-      <div className='h-2/3'>
+      <div className='h-2/3' {...swipeHandlers}>
         <div className='w-5/6 h-full mx-auto rounded-3xl'>
           
           <Loading />
